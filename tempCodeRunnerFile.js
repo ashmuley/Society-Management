@@ -1,0 +1,1 @@
+const{email,password}= req.body;
