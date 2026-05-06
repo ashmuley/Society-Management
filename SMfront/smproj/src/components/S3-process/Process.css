@@ -1,0 +1,160 @@
+.process-section {
+  background: #f8f8f8;
+  padding: 90px 6%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.process-tag {
+  display: inline-block;
+  padding: 0px 50px;
+  border: 5px solid #ff4e00;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.734);
+  color: #ff4e00;
+  border-radius: 30px;
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.process-section h2 {
+  font-size: 52px;
+  color: #212121;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.process-sub {
+  max-width: 760px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.process-wrapper {
+  margin-top: 70px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.process-line {
+  position: absolute;
+  top: 75px;
+  left: 4%;
+  width: 92%;
+  height: 4px;
+  border-top: 3px dashed #ff4e00;
+  z-index: 0;
+  animation: moveLine 6s linear infinite;
+}
+
+@keyframes moveLine {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200px 0;
+  }
+}
+
+.step-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 24px 16px;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px rgba(255,78,0,0.18);
+}
+
+.step-icon {
+  width: 78px;
+  height: 78px;
+  margin: auto;
+  border-radius: 50%;
+  background: #fff3ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  background: #ff4e00;
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgba(255,78,0,0.3);
+}
+
+.step-card h3 {
+  font-size: 22px;
+  color: #212121;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.process-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  color: #ff4e00;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .process-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+  }
+
+  .process-line {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .process-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .process-section h2 {
+    font-size: 34px;
+  }
+
+  .process-sub {
+    font-size: 16px;
+  }
+
+  .process-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

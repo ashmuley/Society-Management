@@ -1,0 +1,85 @@
+.mybookings-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #e9f0f8);
+  padding: 40px 20px;
+}
+
+.mybookings-page h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.booking-list {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.booking-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+}
+
+.booking-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.booking-card p {
+  margin: 8px 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.booking-card strong {
+  color: #111827;
+}
+
+.empty-bookings {
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.loading-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  color: #444;
+}
+
+/* OTP BOX */
+.otp-box {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fef3c7;
+  border: 1px dashed #f59e0b;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.otp-label {
+  font-size: 13px;
+  color: #92400e;
+  margin-bottom: 6px;
+}
+
+.otp-value {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #b45309;
+}

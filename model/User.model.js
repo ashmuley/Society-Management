@@ -20,11 +20,41 @@ const userSchema = new mongoose.Schema(
             minlength: 6,
         },
 
+        phone: {
+            type: String,
+        },
+
+        buildingadd: {
+            type: String,
+        },
+
+        flatNumber: {
+            type: String,
+        },
+
         role: {
             type: String,
             enum: ["admin", "resident","worker"],
             default: "resident",
         },
+        
+        verified: {
+            type: Boolean,
+            default: false,
+        },
+
+        service: {
+            type: String,
+        },
+
+        experience: {
+            type: Number,
+        },
+
+        hourlyRate: {
+            type: Number,
+        },
+    
     },
 
     {

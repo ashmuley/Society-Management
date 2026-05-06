@@ -4,9 +4,15 @@ const router= express.Router();
 // const protect= require("../middleware/auth.middleware");
 const { protect } = require("../middleware/auth.middleware");
 
-const {registerUser, login} =require("../controller/auth.controller");
+const {registerUser, login, getMe} =require("../controller/auth.controller");
 router.post("/register", registerUser);
 router.post("/login", login);
+
+const { registerWorker } = require("../controller/auth.controller");
+
+// Worker registration
+router.post("/register-worker", registerWorker);
+
 
 //protected routes
 router.get("/profile",protect, (req,res) => {
@@ -15,6 +21,8 @@ router.get("/profile",protect, (req,res) => {
         user:req.user   
     });
 });
+
+router.get("/me", protect, getMe);
 
 module.exports = router;
 

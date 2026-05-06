@@ -1,0 +1,85 @@
+/* Layout & Background */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Bungee+Shade&family=Caveat+Brush&family=Iceberg&family=Nova+Square&family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&display=swap');
+
+.iceberg-regular {
+  font-family: "Iceberg", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar {
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  /* background-color: #E8E8E8; Background color requested */
+  background-color: #212121; /* Background color requested */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  /* color: #FF4E00; Primary text color requested */
+  color: #f1e194; /* Primary text color requested */
+}
+
+/* Center Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1e194; /* Primary text color requested */
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+  font-size: 27px;
+  letter-spacing: 1px; 
+  font-family: Iceberg;
+  
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Right Auth Section */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #f1e194; /* Primary text color requested */
+  font-weight: 600;
+  font-size: 25px;
+  font-family: Iceberg;
+}
+
+.separator {
+  color: #f1e194;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    display: none; /* Usually hidden behind a hamburger menu on mobile */
+  }
+}

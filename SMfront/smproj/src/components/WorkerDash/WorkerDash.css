@@ -1,0 +1,165 @@
+/* WELCOME CARD */
+.welcome-card {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 25px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome-card h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.welcome-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.welcome-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* STATS */
+.stats-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.stat-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* BOOKING SECTION */
+.booking-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.booking-card {
+  background: white;
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+}
+
+.booking-card h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.booking-card p {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 5px 0;
+}
+
+/* BUTTONS */
+.booking-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* EMPTY */
+.empty-state {
+  margin-top: 40px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+}
+
+/* ********************************************************* */
+/* LAYOUT */
+.dashboard-layout {
+  display: flex;
+}
+
+.dashboard-main {
+  margin-left: 250px;
+  width: 100%;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  padding: 25px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #111827;
+}
+
+/* LOADING */
+.loading-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.profile-card {
+  margin-top: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.profile-item {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.empty-text {
+  margin-top: 20px;
+  color: #6b7280;
+}

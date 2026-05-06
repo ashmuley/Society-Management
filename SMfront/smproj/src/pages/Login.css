@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d14652, #4c1014);
+  padding: 20px;
+}
+
+.login-card {
+  width: 850px;
+  max-width: 100%;
+  min-height: 500px;
+  background: #f1e194;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.login-left,
+.login-right {
+  width: 50%;
+}
+
+.login-left {
+  background: #5b0e14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-left img {
+  width: 230px;
+  max-width: 100%;
+}
+
+.login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-right h2 {
+  font-size: 32px;
+  color: #5b0e14;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.login-right input {
+  padding: 13px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #d4c36d;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.login-right input:focus {
+  border-color: #5b0e14;
+  box-shadow: 0 0 0 3px rgba(91, 14, 20, 0.15);
+}
+
+.login-right button {
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #5b0e14;
+  color: #f1e194;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-right button:hover {
+  background: #7a1b22;
+}
+
+.signup-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #7a1b22;
+  text-align: center;
+}
+
+.signup-link {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+
+  .login-left {
+    padding: 30px;
+  }
+
+  .login-left img {
+    width: 150px;
+  }
+
+  .login-right {
+    padding: 25px;
+  }
+}

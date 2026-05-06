@@ -1,0 +1,82 @@
+.complaint-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111, #1f1f1f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.complaint-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(241,225,148,0.15);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.complaint-card h2 {
+  color: #F1E194;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.complaint-subtitle {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.complaint-form input,
+.complaint-form select,
+.complaint-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 15px;
+}
+
+.complaint-form textarea {
+  resize: none;
+}
+
+.complaint-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #F1E194;
+  color: #5B0E14;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.complaint-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(241,225,148,0.25);
+}
+
+@media (max-width: 768px) {
+  .complaint-card {
+    padding: 28px 20px;
+  }
+
+  .complaint-card h2 {
+    font-size: 28px;
+  }
+}

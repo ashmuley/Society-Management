@@ -6,8 +6,8 @@ const {authorizeRoles} =require("../middleware/role.middleware");
 
 const {createService} =require("../controller/service.controller");
 
-console.log("I am here  at routes");
-console.log("protect:", protect);
+
+// console.log("I am here  at routes");
 
 
 
