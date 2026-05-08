@@ -8,11 +8,11 @@ app.use(express.json());
 connectDB();
 
 app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
+  cors());
+// {
+//   origin: "http://localhost:5173",
+//   credentials: true,
+// }
 
 //import routes
 const authRoutes = require("./routes/auth.routes");
@@ -34,8 +34,10 @@ app.get("/",(req,res)=>{
   res.send("Society management backend running");
 });
 
+const PORT = process.env.PORT || 3000;
+
 //server hai
-app.listen(3000, ()=> {
+app.listen(PORT, ()=> {
   console.log("the server si running on port 3000");
 
 
