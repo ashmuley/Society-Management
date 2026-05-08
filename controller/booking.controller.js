@@ -385,6 +385,50 @@ const getAvailableRequests = async (req, res) => {
   }
 };
 
+const cancelBooking = async (req, res) => {
+  try {
+    const booking = await Booking.findById(req.params.id);
+
+    if (!booking) {
+      return res.status(404).json({
+        success: false,
+        message: "Booking not found",
+      });
+    }
+
+    // Only booking owner can cancel
+    if (booking.residentId.toString() !== req.user.id) {
+      return res.status(403).json({
+        success: false,
+        message: "Unauthorized",
+      });
+    }
+
+    // Only pending bookings can be cancelled
+    if (booking.status !== "pending") {
+      return res.status(400).json({
+        success: false,
+        message: "Only pending bookings can be cancelled",
+      });
+    }
+
+    booking.status = "cancelled";
+
+    await booking.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Booking cancelled successfully",
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {createBooking,
     getBookings,
     acceptBooking,
@@ -392,4 +436,5 @@ module.exports = {createBooking,
     verifyOTP,
     completeBooking,
     getAvailableRequests,
+    cancelBooking,
 };

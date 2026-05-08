@@ -4,7 +4,7 @@ const router = express.Router();
 const {protect} = require("../middleware/auth.middleware");
 const {authorizeRoles} = require("../middleware/role.middleware");
 
-const {createBooking, getBookings,acceptBooking, rejectBooking,verifyOTP,completeBooking,getAvailableRequests} = require("../controller/booking.controller");
+const {createBooking, getBookings,acceptBooking, rejectBooking,verifyOTP,completeBooking,getAvailableRequests,cancelBooking} = require("../controller/booking.controller");
 
 router.post(
     "/",
@@ -49,6 +49,13 @@ router.get(
   protect,
   authorizeRoles("worker"),
   getAvailableRequests
+);
+
+router.put(
+  "/:id/cancel",
+  protect,
+  authorizeRoles("resident"),
+  cancelBooking
 );
 
 module.exports = router;

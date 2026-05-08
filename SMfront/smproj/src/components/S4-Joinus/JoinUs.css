@@ -1,5 +1,5 @@
 .join-section {
-  padding: 80px 20px;
+  padding: 20px 20px;
   /* background: lineasr-gradient(135deg, #2a290f, #272511); */
   background-color: rgb(255, 255, 255);
 }
@@ -44,8 +44,11 @@
 }
 
 .join-features {
-  display: flex;
-  flex-direction: column;
+ margin-top: 40px;
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+			gap: 10px;
+  /* flex-direction: column; */
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 25px;
@@ -80,8 +83,9 @@
 
 .worker-image img {
   width: 100%;
-  /* max-width: 320px; */
+  max-width: 420px;
   border-radius: 10%;
+  
 }
 
 /* FLOATING CARDS */

@@ -87,6 +87,7 @@
   width: 100%;
   max-width: 500px;
   animation: workerEntry 1.2s ease-out forwards;
+  border-radius: 20px;
 }
 
 @keyframes workerEntry {
@@ -106,7 +107,7 @@
 .hero-worker {
   animation:
     workerEntry 1.2s ease-out forwards,
-    floatWorker 3s ease-in-out infinite 1.2s;
+    /* floatWorker 3s ease-in-out infinite 1.2s; */
 }
 
 @keyframes floatWorker {

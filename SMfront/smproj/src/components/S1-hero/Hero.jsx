@@ -4,6 +4,7 @@ import "./Hero.css";
 import BlurText from "../Effetcs/BlurText";
 import LightRays from "../Effetcs/LightRays";
 import heroimg from "../../assets/R4.png";
+import joinus from "@/assets/joinus.png";
 
 const Hero = () => {
   return (
@@ -55,7 +56,8 @@ const Hero = () => {
 
         <div className="hero-right">
           <img
-            src={heroimg} alt="workers" className="hero-worker"
+            // src={heroimg} alt="workers" className="hero-worker"
+            src={joinus} alt="workers" className="hero-worker"
           />
         </div>
       </div>

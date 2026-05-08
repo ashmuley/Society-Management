@@ -34,9 +34,33 @@ function MyBookings() {
     return <h2 className="loading-text">Loading...</h2>;
   }
 
+  const handleCancelBooking = async (id) => {
+  try {
+    const token = localStorage.getItem("token");
+
+    await API.put(
+      `/bookings/${id}/cancel`,
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    alert("Booking cancelled");
+
+    fetchBookings();
+
+  } catch (error) {
+    alert(error.response?.data?.message || "Cancel failed");
+  }
+};
+
   return (
     <>
     <Navbar/>
+    
     
     <div className="mybookings-page">
       <h1>My Bookings</h1>
@@ -44,12 +68,12 @@ function MyBookings() {
       {bookings.length === 0 ? (
         <p className="empty-bookings">No bookings found.</p>
       ) : (
-        <div className="booking-list">
+        <div className="booking-lists">
           {bookings.map((booking) => (
-            <div className="booking-card" key={booking._id}>
-              <h2>{booking.serviceId?.name}</h2>
+            <div className="booking-cards" key={booking._id}>
+              <h2 id="h2-jobname" >{booking.serviceId?.name}</h2>
 
-              <p>{booking.serviceId?.description}</p>
+              <p id="p-jobdes" >{booking.serviceId?.description}</p>
 
               <p>
                 <strong>Date:</strong> {booking.bookingDate}
@@ -63,9 +87,6 @@ function MyBookings() {
                 <strong>Status:</strong> {booking.status}
               </p>
 
-              {/* <p>
-                <strong>OTP:</strong> {booking.otp}
-              </p> */}
               {booking.status === "accepted" && (
                 <div className="otp-box">
                   <p className="otp-label">Share this OTP with your service provider:</p>
@@ -83,6 +104,15 @@ function MyBookings() {
                 <p>
                   <strong>Price:</strong> ₹{booking.price}
                 </p>
+              )}
+
+              {booking.status === "pending" && (
+                  <button
+                    className="cancel-booking-btn"
+                   onClick={() => handleCancelBooking(booking._id)}
+                  >
+                   Cancel Booking
+                  </button>
               )}
             </div>
           ))}

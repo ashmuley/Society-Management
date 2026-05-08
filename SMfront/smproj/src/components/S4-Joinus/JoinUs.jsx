@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./JoinUs.css";
 import joinus from "@/assets/joinus.png";
+import heroimg from "../../assets/R4.png";
 
 function JoinUs() {
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ function JoinUs() {
 
           <div className="worker-image">
             <img
-              src={joinus}
+              src={heroimg}
               alt="worker"
             />
           </div>
